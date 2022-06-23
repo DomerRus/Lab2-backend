@@ -12,7 +12,6 @@ public class RelocationConfig {
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/ebay/filter/**")
-//                        .filters(f -> f.prefixPath("/myPrefix"))
                         .uri("http://manufacture-facade:8083")
                 )
                 .build();
