@@ -18,7 +18,6 @@ spring:
     password: ${DB_PASS:896699}
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/postgres
     driver-class-name: org.postgresql.Driver
-
   cloud:
     consul:
       host: ${CONSUL_URL:localhost}
@@ -27,13 +26,5 @@ spring:
         prefer-ip-address: true
         instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    service-url:
-      defaultZone: http://${EUREKA_USER:god}:${EUREKA_PASS:ZeroTwoBestWaifu}@${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
 server:
   port: ${PORT:8081}

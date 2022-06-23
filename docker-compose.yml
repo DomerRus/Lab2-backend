@@ -70,10 +70,6 @@ services:
       DB_PORT: "5432"
       CONSUL_URL: "consul"
       CONSUL_PORT: "8500"
-      EUREKA_USER: "god"
-      EUREKA_PASS: "ZeroTwoBestWaifu"
-      EUREKA_HOST: "eureka"
-      EUREKA_PORT: "8761"
     ports:
       - "8082-8083:8081"
 
@@ -90,8 +86,6 @@ services:
       DB_USER: "postgres"
       DB_PASS: "896699"
       DB_PORT: "5432"
-      CONSUL_URL: "consul"
-      CONSUL_PORT: "8500"
       EUREKA_USER: "god"
       EUREKA_PASS: "ZeroTwoBestWaifu"
       EUREKA_HOST: "eureka"
@@ -105,8 +99,6 @@ services:
       - eureka:eureka
       - consul:consul
     environment:
-      CONSUL_URL: "consul"
-      CONSUL_PORT: "8500"
       EUREKA_USER: "god"
       EUREKA_PASS: "ZeroTwoBestWaifu"
       EUREKA_HOST: "eureka"
