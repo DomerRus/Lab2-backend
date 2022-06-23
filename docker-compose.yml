@@ -27,8 +27,6 @@ services:
       EUREKA_PASS: "ZeroTwoBestWaifu"
       EUREKA_HOST: "eureka"
       EUREKA_PORT: "8761"
-    ports:
-      - "9098:8080"
 
   eureka:
     image: ityce4ka/spring-boot:latest-eureka
