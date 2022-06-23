@@ -28,7 +28,7 @@ services:
       EUREKA_HOST: "eureka"
       EUREKA_PORT: "8761"
     ports:
-      - "9092:8080"
+      - "9098:8080"
 
   eureka:
     image: ityce4ka/spring-boot:latest-eureka
