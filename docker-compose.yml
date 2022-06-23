@@ -1,0 +1,114 @@
+version: "3.3"
+
+services:
+  db:
+    image: postgres:13
+    restart: unless-stopped
+    networks:
+      - default
+    environment:
+      POSTGRES_PASSWORD: 896699
+      POSTGRES_USER: postgres
+    volumes:
+      - ./db/db-data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+  gateway:
+    image: ityce4ka/spring-boot:latest-gateway
+    networks:
+      - default
+    links:
+      - eureka:eureka
+      - manufacture_f:manufacture-facade
+      - consul:consul
+    environment:
+      EUREKA_USER: "god"
+      EUREKA_PASS: "ZeroTwoBestWaifu"
+      EUREKA_HOST: "eureka"
+      EUREKA_PORT: "8761"
+    ports:
+      - "9092:8080"
+
+  eureka:
+    image: ityce4ka/spring-boot:latest-eureka
+    networks:
+      - default
+
+  consul:
+    image: consul
+    networks:
+      - default
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+
+  haproxy:
+    image: haproxy
+    networks:
+      - default
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+    ports:
+      - "8080:8080"
+      - "1936:1936"
+    depends_on:
+      - consul
+
+  product_s:
+    image: ityce4ka/spring-boot:latest-product-service
+    networks:
+      - default
+    links:
+      - db:db
+      - eureka:eureka
+      - consul:consul
+    environment:
+      DB_HOST: "db"
+      DB_USER: "postgres"
+      DB_PASS: "896699"
+      DB_PORT: "5432"
+      CONSUL_URL: "consul"
+      CONSUL_PORT: "8500"
+      EUREKA_USER: "god"
+      EUREKA_PASS: "ZeroTwoBestWaifu"
+      EUREKA_HOST: "eureka"
+      EUREKA_PORT: "8761"
+    ports:
+      - "8081-8082:8081"
+
+  manufacture_s:
+    image: ityce4ka/spring-boot:latest-manufacture-service
+    networks:
+      - default
+    links:
+      - db:db
+      - eureka:eureka
+      - consul:consul
+    environment:
+      DB_HOST: "db"
+      DB_USER: "postgres"
+      DB_PASS: "896699"
+      DB_PORT: "5432"
+      CONSUL_URL: "consul"
+      CONSUL_PORT: "8500"
+      EUREKA_USER: "god"
+      EUREKA_PASS: "ZeroTwoBestWaifu"
+      EUREKA_HOST: "eureka"
+      EUREKA_PORT: "8761"
+
+  manufacture_f:
+    image: ityce4ka/spring-boot:latest-manufacture-facade
+    networks:
+      - default
+    links:
+      - db:db
+      - eureka:eureka
+      - consul:consul
+    environment:
+      CONSUL_URL: "consul"
+      CONSUL_PORT: "8500"
+      EUREKA_USER: "god"
+      EUREKA_PASS: "ZeroTwoBestWaifu"
+      EUREKA_HOST: "eureka"
+      EUREKA_PORT: "8761"
