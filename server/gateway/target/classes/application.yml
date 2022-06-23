@@ -16,12 +16,6 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-    consul:
-      host: ${CONSUL_URL:localhost}
-      port: ${CONSUL_PORT:8500}
-      discovery:
-        prefer-ip-address: true
-        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 eureka:
   instance:

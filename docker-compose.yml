@@ -75,7 +75,7 @@ services:
       EUREKA_HOST: "eureka"
       EUREKA_PORT: "8761"
     ports:
-      - "8081-8082:8081"
+      - "8082-8083:8081"
 
   manufacture_s:
     image: ityce4ka/spring-boot:latest-manufacture-service
@@ -102,7 +102,6 @@ services:
     networks:
       - default
     links:
-      - db:db
       - eureka:eureka
       - consul:consul
     environment:

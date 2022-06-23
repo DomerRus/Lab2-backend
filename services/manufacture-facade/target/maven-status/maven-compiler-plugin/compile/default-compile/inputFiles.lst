@@ -1,0 +1,9 @@
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/services/ManufactureService.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/services/fallbacks/ManufactureFallback.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/model/enums/OrganizationType.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/model/enums/UnitOfMeasure.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/web/ManufactureResource.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/model/Product.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/model/Coordinates.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/ManufactureApplication.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-facade/src/main/java/ru/itmo/facade/model/Organization.java

@@ -36,4 +36,4 @@ eureka:
     service-url:
       defaultZone: http://${EUREKA_USER:god}:${EUREKA_PASS:ZeroTwoBestWaifu}@${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
 server:
-  port: ${PORT:8082}
+  port: ${PORT:8081}

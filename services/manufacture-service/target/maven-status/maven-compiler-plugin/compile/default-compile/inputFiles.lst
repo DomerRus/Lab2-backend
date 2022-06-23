@@ -1,0 +1,12 @@
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/model/enums/OrganizationType.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/config/ServletInitializer.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/web/ManufactureResource.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/services/impl/ManufactureServiceImpl.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/services/ManufactureService.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/model/Product.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/model/Organization.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/repository/ProductRepository.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/model/enums/UnitOfMeasure.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/ManufactureApplication.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/config/JacksonConfiguration.java
+/Users/markgrekov/Documents/Projects/product-g/services/manufacture-service/src/main/java/ru/itmo/service/model/Coordinates.java
